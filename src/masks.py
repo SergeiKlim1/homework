@@ -7,7 +7,7 @@ def get_mask_card_number(card_number: int) -> str:
         + card_number_string[-4:]
     )
     mask_card_number = " ".join(
-        [mask_card[i : i + 4] for i in range(0, len(mask_card), 4)]
+        [mask_card[i:i + 4] for i in range(0, len(mask_card), 4)]
     )
     return mask_card_number
 
