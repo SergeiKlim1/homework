@@ -19,15 +19,3 @@ def get_date(date: str) -> str:
     date_iso = datetime.fromisoformat(date)
     new_date = datetime.strftime(date_iso, "%d.%m.%Y")
     return new_date
-
-
-if __name__ == "__main__":
-    test1 = "MasterCard 7158300734726758"
-    test2 = "Счет 64686473678894779589"
-    test3 = "2024-12-31T02:26:18.671407"
-    test4 = "Visa Classic 6831982476737658"
-
-    print(mask_account_card(test1))
-    print(mask_account_card(test2))
-    print(get_date(test3))
-    print(mask_account_card(test4))
