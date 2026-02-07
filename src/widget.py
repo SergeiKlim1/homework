@@ -15,7 +15,7 @@ def mask_account_card(account_card: str) -> str:
 
 
 def get_date(date: str) -> str:
-    """Функция, которая принимает дату в iso формате и возвращаяе дату в формате дд.мм.гггг"""
+    """Функция, которая принимает дату в iso формате и возвращает дату в формате дд.мм.гггг"""
     date_iso = datetime.fromisoformat(date)
     new_date = datetime.strftime(date_iso, "%d.%m.%Y")
     return new_date
