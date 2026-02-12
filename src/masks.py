@@ -23,7 +23,3 @@ def get_mask_account(account_number: str | int) -> str:
         raise ValueError("Строка пустая")
     else:
         raise ValueError("Введены не корректные данные")
-
-numbers_card = []
-if __name__ == "__main__":
-    print(get_mask_account(numbers_card))

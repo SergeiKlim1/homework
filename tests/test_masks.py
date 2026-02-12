@@ -11,7 +11,7 @@ def test_get_mask_card_number(card_number, expected):
 
 @pytest.mark.parametrize("incorrect_number, expected", [("", "Строка пустая"),
                                                              ("fhd", "Введены не корректные данные"),
-                                                             ([], "Введены не корректные данные")])
+                                                             ({}, "Введены не корректные данные")])
 def test_get_mask_incorrect_card_number(incorrect_number, expected):
     with pytest.raises(ValueError) as exc_info:
         get_mask_card_number(incorrect_number)
