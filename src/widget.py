@@ -5,7 +5,7 @@ from masks import get_mask_account, get_mask_card_number
 
 def mask_account_card(account_card: str) -> str:
     """Функция, которая принимает номер, имя карты или счет и выводит в замаскированном виде"""
-    name_card = account_card[0:-len(account_card.split()[-1])]
+    name_card = account_card[0 : -len(account_card.split()[-1])]
     number_account_card = account_card.split()[-1]
     if len(account_card.split()[-1]) == 16:
         mask_account = name_card + get_mask_card_number(number_account_card)
