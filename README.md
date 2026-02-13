@@ -95,7 +95,7 @@
 
 **pytest tests/test_processing.py**
 
-+ **Бейджи:** Визуальный статус покрытия &&&&&&&&&&
++ Визуальный статус покрытия [index.html](htmlcov/index.html)
 
 
 

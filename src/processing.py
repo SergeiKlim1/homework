@@ -14,7 +14,6 @@ def filter_by_state(
     transactions_list_with_state = []
     transactions_list = []
 
-
     for transaction in transactions:
         for key in transaction:
             if key == "state":
@@ -36,11 +35,13 @@ def sort_by_date(
     """
     try:
         sorted_list_by_date = sorted(
-        transactions,
-        key=lambda x: (datetime.strptime(x["date"], "%Y-%m-%dT%H:%M:%S.%f"), x["id"]),
-        reverse=type_sort)
+            transactions,
+            key=lambda x: (
+                datetime.strptime(x["date"], "%Y-%m-%dT%H:%M:%S.%f"),
+                x["id"],
+            ),
+            reverse=type_sort,
+        )
         return sorted_list_by_date
     except ValueError:
         raise ValueError("Дата не в iso формате")
-
-

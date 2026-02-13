@@ -2,9 +2,13 @@ def get_mask_card_number(card_number: str | int) -> str:
     """Функция, которая принимает и маскирует номер карты"""
     card_number_str = str(card_number)
     if len(card_number_str) == 16:
-        mask_card = card_number_str[0:6] + (len(card_number_str[6:-4]) * "*") + card_number_str[-4:]
+        mask_card = (
+            card_number_str[0:6]
+            + (len(card_number_str[6:-4]) * "*")
+            + card_number_str[-4:]
+        )
         mask_card_number = " ".join(
-            [mask_card[i : i + 4] for i in range(0, len(mask_card), 4)]
+            [mask_card[i:i + 4] for i in range(0, len(mask_card), 4)]
         )
         return mask_card_number
     elif len(card_number_str) == 0:
